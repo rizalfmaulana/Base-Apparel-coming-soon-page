@@ -89,3 +89,51 @@ form button {
   background-image: url("./images/hero-desktop.jpg");
   background-repeat: no-repeat;
 }
+
+@media (max-width: 1024px) {
+  body {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 90%;
+  }
+  .right {
+    margin-top: 11vh;
+    grid-row: 1;
+    background-image: url("./images/hero-mobile.jpg");
+    background-position: 100%;
+    width: 100% !important;
+    height: 30vh;
+  }
+  .left {
+    width: 100%;
+    grid-row: 1;
+  }
+
+  .left h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .left p {
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+  }
+  form {
+    width: 100%;
+    margin: auto 10vw !important;
+  }
+}
