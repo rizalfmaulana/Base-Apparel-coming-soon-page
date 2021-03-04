@@ -22,9 +22,12 @@
       <h1><span>We're</span>coming soon</h1>
       <p>Hello fellow shoppers! We're currently building our new fashion store. 
   Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <form action="email">
-        <input type="email" id='email' name='email' placeholder="Email Address" class="address">
+      <form id='form' action="email">
+        <div class="inputbox">
+          <input type="email" id='email' name='email' placeholder="Email Address" class="address" required onkeydown="validation()">
         <button><img src="./images/icon-next.svg" alt="arrow"></button>
+        <span id='text'></span>
+        </div>
       </form>
     </div>
     <div class="right"></div>
@@ -35,5 +38,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer> -->
+  <script src="./main.js"></script>
 </body>
 </html>

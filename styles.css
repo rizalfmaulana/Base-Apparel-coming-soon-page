@@ -16,6 +16,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   height: 100vh;
   background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -62,12 +63,37 @@ form {
 }
 
 form input {
-  width: 100%;
+  width: 120%;
   padding: 20px;
   border-radius: 50px;
   outline: none;
   border: 1px solid var(--DesaturatedRed);
   color: var(--DesaturatedRed);
+}
+
+#text {
+  display: block;
+  color: var(--SoftRed);
+  padding: 5px;
+  position: absolute;
+  top: 70px;
+}
+
+#form .inputbox {
+  position: relative;
+}
+
+#form.invalid .inputbox::before {
+  content: "";
+  position: absolute;
+  background-image: url("./images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  top: 20px;
+  right: 5px;
+  z-index: 1000;
 }
 
 form button {
@@ -80,7 +106,9 @@ form button {
   cursor: pointer;
   transition: all 0.4s ease;
   position: relative;
-  right: 5rem;
+  /* right: 5rem; */
+  top: -60px;
+  left: 17rem;
 }
 
 .right {
@@ -135,5 +163,8 @@ form button {
   form {
     width: 100%;
     margin: auto 10vw !important;
+  }
+  form input {
+    width: 100%;
   }
 }
